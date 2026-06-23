@@ -1,0 +1,173 @@
+FUNCTION_BLOCK FBPOU
+VAR_INPUT
+END_VAR
+VAR_OUTPUT
+END_VAR
+VAR
+	FBSTP: FB_STP;
+	STP: class_step;
+	SPARE1: BOOL;
+	COND1: BOOL;
+	SPARE2: BOOL;
+END_VAR
+
+
+
+
+
+
+FBSTP.RunFlag:=TRUE ;
+FBSTP(InStep:=STP);
+
+
+CASE STP.StepNo OF
+
+		0:	
+		SPARE1:=TRUE;
+		STP.DelayTime:=1000;	
+		STP.NextStepNo:=10;						
+		STP.Condition:=COND1;						
+		STP.OutPls:=SPARE2;
+		
+		10:	
+		SPARE1:=TRUE;
+		STP.DelayTime:=1000;	
+		STP.NextStepNo:=20;						
+		STP.Condition:=COND1;						
+		STP.OutPls:=SPARE2;
+
+		20:	
+		SPARE1:=TRUE;
+		STP.DelayTime:=1000;	
+		STP.NextStepNo:=30;						
+		STP.Condition:=COND1;						
+		STP.OutPls:=SPARE2;
+
+		30:	
+		SPARE1:=TRUE;
+		STP.DelayTime:=1000;	
+		STP.NextStepNo:=40;						
+		STP.Condition:=COND1;						
+		STP.OutPls:=SPARE2;
+
+		40:	
+		SPARE1:=TRUE;
+		STP.DelayTime:=1000;	
+		STP.NextStepNo:=50;						
+		STP.Condition:=COND1;						
+		STP.OutPls:=SPARE2;
+
+		50:	
+		SPARE1:=TRUE;
+		STP.DelayTime:=1000;	
+		STP.NextStepNo:=60;						
+		STP.Condition:=COND1;						
+		STP.OutPls:=SPARE2;
+
+		60:	
+		SPARE1:=TRUE;
+		STP.DelayTime:=1000;	
+		STP.NextStepNo:=70;						
+		STP.Condition:=COND1;						
+		STP.OutPls:=SPARE2;
+
+		70:	
+		SPARE1:=TRUE;
+		STP.DelayTime:=1000;	
+		STP.NextStepNo:=80;						
+		STP.Condition:=COND1;						
+		STP.OutPls:=SPARE2;
+
+		80:	
+		SPARE1:=TRUE;
+		STP.DelayTime:=1000;	
+		STP.NextStepNo:=90;						
+		STP.Condition:=COND1;						
+		STP.OutPls:=SPARE2;
+
+		90:	
+		SPARE1:=TRUE;
+		STP.DelayTime:=1000;	
+		STP.NextStepNo:=100;						
+		STP.Condition:=COND1;						
+		STP.OutPls:=SPARE2;
+
+		100:	
+		SPARE1:=TRUE;
+		STP.DelayTime:=1000;	
+		STP.NextStepNo:=110;						
+		STP.Condition:=COND1;						
+		STP.OutPls:=SPARE2;
+
+		110:	
+		SPARE1:=TRUE;
+		STP.DelayTime:=1000;	
+		STP.NextStepNo:=120;						
+		STP.Condition:=COND1;						
+		STP.OutPls:=SPARE2;
+
+		120:	
+		SPARE1:=TRUE;
+		STP.DelayTime:=1000;	
+		STP.NextStepNo:=130;						
+		STP.Condition:=COND1;						
+		STP.OutPls:=SPARE2;
+
+		130:	
+		SPARE1:=TRUE;
+		STP.DelayTime:=1000;	
+		STP.NextStepNo:=140;						
+		STP.Condition:=COND1;						
+		STP.OutPls:=SPARE2;
+
+		140:	
+		SPARE1:=TRUE;
+		STP.DelayTime:=1000;	
+		STP.NextStepNo:=150;						
+		STP.Condition:=COND1;						
+		STP.OutPls:=SPARE2;
+
+		150:	
+		SPARE1:=TRUE;
+		STP.DelayTime:=1000;	
+		STP.NextStepNo:=160;						
+		STP.Condition:=COND1;						
+		STP.OutPls:=SPARE2;
+
+		160:	
+		SPARE1:=TRUE;
+		STP.DelayTime:=1000;	
+		STP.NextStepNo:=170;						
+		STP.Condition:=COND1;						
+		STP.OutPls:=SPARE2;
+
+		170:	
+		SPARE1:=TRUE;
+		STP.DelayTime:=1000;	
+		STP.NextStepNo:=180;						
+		STP.Condition:=COND1;						
+		STP.OutPls:=SPARE2;
+
+		180:	
+		SPARE1:=TRUE;
+		STP.DelayTime:=1000;	
+		STP.NextStepNo:=190;						
+		STP.Condition:=COND1;						
+		STP.OutPls:=SPARE2;
+
+		190:	
+		SPARE1:=TRUE;
+		STP.DelayTime:=1000;	
+		STP.NextStepNo:=200;						
+		STP.Condition:=COND1;						
+		STP.OutPls:=SPARE2;
+
+		200:	
+		SPARE1:=TRUE;
+		STP.DelayTime:=1000;	
+		// 到了第 200 步，下一步可以根据你的需求跳转回 0 重新循环，或者去往其他终止步
+		STP.NextStepNo:=0;						
+		STP.Condition:=COND1;						
+		STP.OutPls:=SPARE2;
+
+END_CASE;
